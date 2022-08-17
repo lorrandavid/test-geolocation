@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="demo">Testar</button>
+
+    <script type="text/javascript">
+        var btn = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function() {
+                    alert('Sucesso!');
+                }, function(error) {
+                    alert(error.code);
+                    alert(error.message);
+                });
+            } else {
+                alert('Geolocation não suportado');
+            }
+        }
+
+        btn.addEventListener('click', function() {
+            getLocation();
+        });
+    </script>
+</body>
+</html>
