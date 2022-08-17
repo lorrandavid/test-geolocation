@@ -19,7 +19,7 @@
                 }, function(error) {
                     alert(error.code);
                     alert(error.message);
-                });
+                }, { enableHighAccuracy: true });
             } else {
                 alert('Geolocation não suportado');
             }
