@@ -26,12 +26,8 @@
         });
 
         btnIos.addEventListener('click', function() {
-            var reader = new FileReader();
             var out = new Blob([byteTeste], { type: 'application/pdf' });
-            reader.onload = function (e) {
-                window.location.href = reader.result;
-            }
-            reader.readAsDataURL(out);
+            window.location.assign(out);
         });
     </script>
 </body>
