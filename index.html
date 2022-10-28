@@ -26,7 +26,8 @@
         });
 
         btnIos.addEventListener('click', function() {
-            var out = new Blob([byteTeste], { type: 'application/pdf' });
+            var blob = new Blob([byteTeste], { type: 'application/pdf' });
+            var out = URL.createObjectURL(blob);
             window.location.assign(out);
         });
     </script>
