@@ -44,7 +44,7 @@
         });
 
         btnIos.addEventListener('click', function() {
-            var blob = base64toBlob(byteTeste, 'application/pdfapplication/pdf');
+            var blob = base64toBlob(byteTeste, 'application/pdf');
             var out = URL.createObjectURL(blob);
             window.location.assign(out);
         });
